@@ -1,3 +1,7 @@
+def proton73():
+    link = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-3/GE-Proton7-3.tar.gz"
+    return link
+
 def protonge731():
     link = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.3-GE-1/Proton-7.3-GE-1.tar.gz"
     return link
