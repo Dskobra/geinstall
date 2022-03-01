@@ -66,7 +66,8 @@ def WINGE_MENU():
     global GE_PATH
     GE_TYPE="wine-lutris"
     print("Select WineGE Version")
-    print("722 Wine-7.2-GE-2")
+    print("71. Wine-GE-Proton7-1")
+    print("722. Wine-7.2-GE-2")
     print("721. Wine-7.2-GE-1  711. Wine-7.1-GE-1")
     print("0. Exit")
 
@@ -77,16 +78,19 @@ def WINGE_MENU():
     subprocess.call(["mkdir", GE_PATH])
     
     userInput = input("Enter an option: ")
-    if userInput == '722':
+    if userInput == "71":
+        from winege import winege71
+        GELINK = winege71()
+        PROCESS_LINK()
+        SETUP_GE()
+    elif userInput == '722':
         from winege import winege722
         GELINK = winege722()
-        print(GELINK)
         PROCESS_LINK()
         SETUP_GE()
     elif userInput == '721':
         from winege import winege721
         GELINK = winege721()
-        print(GELINK)
         PROCESS_LINK()
         SETUP_GE()
     elif userInput == '711':
@@ -118,11 +122,13 @@ def PROTONGE_MENU():
 
     userInput = input("Enter an option: ")
     if userInput == "74":
+        GE_TYPE = "GE-Proton"
         from protonge import proton74
         GELINK = proton74()
         PROCESS_LINK()
         SETUP_GE()
     elif userInput == "73":
+        GE_TYPE = "GE-Proton"
         from protonge import proton73
         GELINK = proton73()
         PROCESS_LINK()
