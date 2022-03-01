@@ -106,6 +106,7 @@ def PROTONGE_MENU():
     global GE_TYPE
     GE_TYPE="Proton"
     print("Select Proton Version")
+    print("GE-Proton7-4")
     print("73 GE-Proton7-3")
     print("731 Proton-7.3-GE-1")
     print("722 Proton-7.2-GE-2") 
@@ -116,7 +117,12 @@ def PROTONGE_MENU():
     print("0. Exit")
 
     userInput = input("Enter an option: ")
-    if userInput == "73":
+    if userInput == "74":
+        from protonge import proton74
+        GELINK = proton74()
+        PROCESS_LINK()
+        SETUP_GE()
+    elif userInput == "73":
         from protonge import proton73
         GELINK = proton73()
         PROCESS_LINK()
