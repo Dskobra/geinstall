@@ -127,21 +127,25 @@ def PROTONGE_MENU():
     print("0. Exit")
 
     userInput = input("Enter an option: ")
-    if userInput == "74":
-        GE_TYPE = "GE-Proton"
+    if userInput == "76":
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-6/GE-Proton7-6.tar.gz"
+        GETARBALL = "GE-Proton7-6.tar.gz"
+        SETUP_GE()
+    elif userInput == "74":
         from protonge import proton74
-        GELINK = proton74()
-        PROCESS_LINK()
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-4/GE-Proton7-4.tar.gz"
+        GETARBALL = "GE-Proton7-4.tar.gz"
         SETUP_GE()
     elif userInput == "73":
         GE_TYPE = "GE-Proton"
         from protonge import proton73
-        GELINK = proton73()
-        PROCESS_LINK()
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-3/GE-Proton7-3.tar.gz"
+        GETARBALL = "GE-Proton7-3.tar.gz"
         SETUP_GE()
     elif userInput == "731":
         from protonge import protonge731
-        GELINK = protonge731()
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.3-GE-1/Proton-7.3-GE-1.tar.gz"
+        GETARBALL = "Proton-7.3-GE-1.tar.gz"
         PROCESS_LINK()
         SETUP_GE()
     elif userInput == '722':
