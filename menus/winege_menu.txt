@@ -1,0 +1,7 @@
+Select WineGE Version
+72. Wine-GE-Proton7-2
+71. Wine-GE-Proton7-1
+722. Wine-7.2-GE-2
+721. Wine-7.2-GE-1  
+711. Wine-7.1-GE-1
+0. Exit

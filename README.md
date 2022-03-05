@@ -1,3 +1,3 @@
 # geinstall
 
-Bits and pieces of code I didn't want to trash.
+Experimental area for code I'm playing with. Don't expect it to work. :P

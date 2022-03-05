@@ -1,0 +1,10 @@
+Select Proton Version
+74. GE-Proton7-4
+73 GE-Proton7-3
+731 Proton-7.3-GE-1
+722 Proton-7.2-GE-2 
+721. Proton-7.2-GE-1
+712. Proton-7.1-GE-2 
+711. Proton-7.1-GE-1
+7061. Proton-7.0rc6-GE-1
+0. Exit
