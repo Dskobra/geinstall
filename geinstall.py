@@ -6,19 +6,7 @@ GELINK=""
 GETARBALL=""
 STEAM_INSTALL_TYPE=""
 GE_PATH=""
-GE_TYPE=""
 
-
-def PROCESS_LINK():
-    global GELINK
-    global GETARBALL
-    global GE_TYPE
-    print(GELINK)
-    link = GELINK
-    #start_pos = link.index("Proton")
-    start_pos = link.index(GE_TYPE)
-    end_pos = len(link)
-    GETARBALL = link[start_pos:end_pos]
 
 def SETUP_GE():
     global GELINK
@@ -69,7 +57,9 @@ def WINGE_MENU():
     print("72. Wine-GE-Proton7-2")
     print("71. Wine-GE-Proton7-1")
     print("722. Wine-7.2-GE-2")
-    print("721. Wine-7.2-GE-1  711. Wine-7.1-GE-1")
+    print("721. Wine-7.2-GE-1")
+    print("711. Wine-7.1-GE-1")
+    print("70. Wine-7.0rc3-GE-1")
     print("0. Exit")
 
     temp1 = "/home/" # set the home part of location for concat later
@@ -80,35 +70,34 @@ def WINGE_MENU():
     
     userInput = input("Enter an option: ")
     if userInput == "72":
-        from winege import winege72
-        GELINK = winege72()
-        PROCESS_LINK()
+        GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-2/wine-lutris-GE-Proton7-2-x86_64.tar.xz"
+        GETARBALL = "wine-lutris-GE-Proton7-2-x86_64.tar.xz"
         SETUP_GE()
     elif userInput == "71":
-        from winege import winege71
-        GELINK = winege71()
-        PROCESS_LINK()
+        GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-1/wine-lutris-GE-Proton7-1-x86_64.tar.xz"
+        GETARBALL = "wine-lutris-GE-Proton7-1-x86_64.tar.xz"
         SETUP_GE()
-    elif userInput == '722':
-        from winege import winege722
-        GELINK = winege722()
-        PROCESS_LINK()
+    elif userInput == "722":
+        GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.2-GE-2/wine-lutris-ge-7.2-2-x86_64.tar.xz"
+        GETARBALL = "wine-lutris-ge-7.2-2-x86_64.tar.xz"
         SETUP_GE()
-    elif userInput == '721':
-        from winege import winege721
-        GELINK = winege721()
-        PROCESS_LINK()
+    elif userInput == "721":
+        GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.2-GE-1/wine-lutris-ge-7.2-1-x86_64.tar.xz"
+        GETARBALL = "wine-lutris-ge-7.2-1-x86_64.tar.xz"
         SETUP_GE()
-    elif userInput == '711':
-        from winege import winege711
-        GELINK = winege711()
-        PROCESS_LINK()
+    elif userInput == "711":
+        GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.1-GE-1/wine-lutris-ge-7.1-1-x86_64.tar.xz"
+        GETARBALL = "wine-lutris-ge-7.1-1-x86_64.tar.xz"
         SETUP_GE()
-    elif userInput == '2':
-        print(userInput)
-        print("Placeholder")
+    elif userInput == "70":
+        GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/7.0rc3-GE-1/wine-lutris-ge-7.0rc3-1-x86_64.tar.xz"
+        GETARBALL = "wine-lutris-ge-7.0rc3-1-x86_64.tar.xz"
+        SETUP_GE()()
+    elif userInput == '0':
+        quit()
     else:
-        print("error")
+        print(error)
+        quit()
 
 def PROTONGE_MENU():
     global GELINK
@@ -132,46 +121,37 @@ def PROTONGE_MENU():
         GETARBALL = "GE-Proton7-6.tar.gz"
         SETUP_GE()
     elif userInput == "74":
-        from protonge import proton74
         GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-4/GE-Proton7-4.tar.gz"
         GETARBALL = "GE-Proton7-4.tar.gz"
         SETUP_GE()
     elif userInput == "73":
-        GE_TYPE = "GE-Proton"
-        from protonge import proton73
         GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-3/GE-Proton7-3.tar.gz"
         GETARBALL = "GE-Proton7-3.tar.gz"
         SETUP_GE()
     elif userInput == "731":
-        from protonge import protonge731
         GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.3-GE-1/Proton-7.3-GE-1.tar.gz"
         GETARBALL = "Proton-7.3-GE-1.tar.gz"
         PROCESS_LINK()
         SETUP_GE()
-    elif userInput == '722':
-        from protonge import protonge722
-        GELINK = protonge722()
-        PROCESS_LINK()
+    elif userInput == "722":
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.2-GE-2/Proton-7.2-GE-2.tar.gz"
+        GETARBALL = "Proton-7.2-GE-2.tar.gz"
         SETUP_GE()
-    elif userInput == '721':
-        from protonge import protonge721
-        GELINK = protonge721()
-        PROCESS_LINK()
+    elif userInput == "721":
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.2-GE-1/Proton-7.2-GE-1.tar.gz"
+        GETARBALL = "Proton-7.2-GE-1.tar.gz"
         SETUP_GE()
-    elif userInput == '712':
-        from protonge import protonge712
-        GELINK = protonge712()
-        PROCESS_LINK()
+    elif userInput == "712":
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.1-GE-2/Proton-7.1-GE-2.tar.gz"
+        GETARBALL = "Proton-7.1-GE-2.tar.gz"
         SETUP_GE()
-    elif userInput == '711':
-        from protonge import protonge711
-        GELINK = protonge711()
-        PROCESS_LINK()
+    elif userInput == "711":
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.1-GE-1/Proton-7.1-GE-1.tar.gz"
+        GETARBALL = "Proton-7.1-GE-1.tar.gz"
         SETUP_GE()
-    elif userInput == '7061':
-        from protonge import protonge70rc61
-        GELINK = protonge70rc61()
-        PROCESS_LINK()
+    elif userInput == "7061":
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/7.0rc6-GE-1/Proton-7.0rc6-GE-1.tar.gz"
+        GETARBALL = "Proton-7.0rc6-GE-1.tar.gz"
         SETUP_GE()
     elif userInput == '0':
         quit()
