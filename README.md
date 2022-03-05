@@ -1,7 +1,3 @@
 # geinstall
 
-Downloads glorious eggroll proton port for both steam and lutris.
-
-Plans
-
-* add a gui
+Bits and pieces of code I didn't want to trash.
