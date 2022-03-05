@@ -1,3 +1,7 @@
+def winege72():
+    link = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-2/wine-lutris-GE-Proton7-2-x86_64.tar.xz"
+    return link
+
 def winege71():
     link = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-1/wine-lutris-GE-Proton7-1-x86_64.tar.xz"
     return link

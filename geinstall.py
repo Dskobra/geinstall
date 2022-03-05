@@ -116,7 +116,7 @@ def PROTONGE_MENU():
     global GE_TYPE
     GE_TYPE="Proton"
     print("Select Proton Version")
-    print("GE-Proton7-4")
+    print("74. GE-Proton7-4")
     print("73 GE-Proton7-3")
     print("731 Proton-7.3-GE-1")
     print("722 Proton-7.2-GE-2") 
