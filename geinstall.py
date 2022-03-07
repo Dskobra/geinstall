@@ -54,6 +54,7 @@ def WINGE_MENU():
     global GE_PATH
     GE_TYPE="wine-lutris"
     print("Select WineGE Version")
+    print("78. Wine-GE-Proton7-5")
     print("72. Wine-GE-Proton7-2")
     print("71. Wine-GE-Proton7-1")
     print("722. Wine-7.2-GE-2")
@@ -69,7 +70,11 @@ def WINGE_MENU():
     subprocess.call(["mkdir", GE_PATH])
     
     userInput = input("Enter an option: ")
-    if userInput == "72":
+    if userInput == "78":
+        GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-5/wine-lutris-GE-Proton7-5-x86_64.tar.xz"
+        GETARBALL = "wine-lutris-GE-Proton7-5-x86_64.tar.xz"
+        SETUP_GE()
+    elif userInput == "72":
         GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-2/wine-lutris-GE-Proton7-2-x86_64.tar.xz"
         GETARBALL = "wine-lutris-GE-Proton7-2-x86_64.tar.xz"
         SETUP_GE()
@@ -105,6 +110,7 @@ def PROTONGE_MENU():
     global GE_TYPE
     GE_TYPE="Proton"
     print("Select Proton Version")
+    print("78. GE-Proton7-8")
     print("74. GE-Proton7-4")
     print("73 GE-Proton7-3")
     print("731 Proton-7.3-GE-1")
@@ -116,7 +122,11 @@ def PROTONGE_MENU():
     print("0. Exit")
 
     userInput = input("Enter an option: ")
-    if userInput == "76":
+    if userInput == "78":
+        GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-8/GE-Proton7-8.tar.gz"
+        GETARBALL = "GE-Proton7-8.tar.gz"
+        SETUP_GE()
+    elif userInput == "76":
         GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-6/GE-Proton7-6.tar.gz"
         GETARBALL = "GE-Proton7-6.tar.gz"
         SETUP_GE()
