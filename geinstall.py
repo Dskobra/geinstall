@@ -128,7 +128,7 @@ def PROTONGE_MENU():
     print("0. Exit")
 
     userInput = input("Enter an option: ")
-    if userInput == "":
+    if userInput == "79":
         GELINK = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton7-9/GE-Proton7-9.tar.gz"
         GETARBALL = "GE-Proton7-9.tar.gz"
         SETUP_GE()
