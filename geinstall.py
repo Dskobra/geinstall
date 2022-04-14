@@ -73,7 +73,7 @@ def WINGE_MENU():
     subprocess.call(["mkdir", GE_PATH])
     
     userInput = input("Enter an option: ")
-    if userInput == "":
+    if userInput == "78":
         GELINK = "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton7-8/wine-lutris-GE-Proton7-8-x86_64.tar.xz"
         GETARBALL = "wine-lutris-GE-Proton7-8-x86_64.tar.xz"
         SETUP_GE()
